@@ -7,6 +7,9 @@
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+
     <!-- Custom CSS-->
     <link href="css/grayscale.css" rel="stylesheet">
     -
@@ -30,6 +33,9 @@
             </li>
             <li>
                 <a class="page-scroll" href="#portfolio">Portfolio</a>
+            </li>
+            <li>
+                <a class="page-scroll" href="#Calender">Calender</a>
             </li>
             <li>
                 <a class="page-scroll" href="#contact">Contact</a>
@@ -58,8 +64,8 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2></h2>
-                <p>The animal is created by a small group of students who wanted to make the zoo a bigger learning space for children.</p>
-                <p>The innovative idea created by the group `Try, Try again` is a small box device that will get the attention of children by creating an animal sound. When the children hear this sound they will start the quiz.</p>
+                <p></p>
+                <p></p>
             </div>
         </div>
     </section>
@@ -68,7 +74,7 @@
             <div class="row no-gutter">
                 <div class="col-lg-4 col-sm-6">
                     <a href="#" class="portfolio-box">
-                        <img src="img/portfolio/1.jpg" class="img-responsive" alt="">
+                        <img src="img/Hanneke.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
@@ -83,7 +89,7 @@
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <a href="#" class="portfolio-box">
-                        <img src="img/portfolio/2.jpg" class="img-responsive" alt="">
+                        <img src="img/catalunya.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
@@ -98,7 +104,7 @@
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <a href="#" class="portfolio-box">
-                        <img src="img/portfolio/3.jpg" class="img-responsive" alt="">
+                        <img src="img/motor_1.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
@@ -113,7 +119,7 @@
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <a href="#" class="portfolio-box">
-                        <img src="img/portfolio/4.jpg" class="img-responsive" alt="">
+                        <img src="img/harley.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
@@ -128,7 +134,7 @@
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <a href="#" class="portfolio-box">
-                        <img src="img/portfolio/5.jpg" class="img-responsive" alt="">
+                        <img src="img/winter-in-praag.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
@@ -141,53 +147,43 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="img/portfolio/6.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+
             </div>
         </div>
     </section>
-
-    <aside class="bg-dark">
-        <div class="container text-center">
-            <div class="call-to-action">
-                <h2>Free Download at Start Bootstrap!</h2>
-                <a href="#" class="btn btn-default btn-xl wow tada">Download Now!</a>
-            </div>
-        </div>
-    </aside>
 
     <section id="contact">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Let's Get In Touch!</h2>
-                    <hr class="primary">
-                    <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
-                </div>
-                <div class="col-lg-4 col-lg-offset-2 text-center">
-                    <i class="fa fa-phone fa-3x wow bounceIn"></i>
-                    <p>123-456-6789</p>
-                </div>
-                <div class="col-lg-4 text-center">
-                    <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                    <p><a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a></p>
-                </div>
+                <p>For contact you can write me an E-mail. Leave your information and i will come back to you.</p>
+
+
             </div>
         </div>
     </section>
+    <div class="col_w330 float_l">
+        <h4>Write a message to us</h4>
+        <div id="contact_form">
+            <form method="post" name="contact" action="#">
+
+                <label for="author">Name:</label> <input type="text" id="author" name="author" class="required input_field" />
+                <div class="cleaner h10"></div>
+
+                <label for="email">Email:</label> <input type="text" class="validate-email required input_field" name="email" id="email" />
+                <div class="cleaner h10"></div>
+
+                <label for="subject">Subject:</label> <input type="text" class="validate-subject required input_field" name="subject" id="subject"/>
+                <div class="cleaner h10"></div>
+
+                <label for="text">Message:</label> <textarea id="text" name="text" rows="0" cols="0" class="required"></textarea>
+                <div class="cleaner h10"></div>
+
+                <input type="submit" value="Send" id="submit" name="submit" class="submit_btn float_l" />
+                <input type="reset" value="Reset" id="reset" name="reset" class="submit_btn float_r" />
+
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>
