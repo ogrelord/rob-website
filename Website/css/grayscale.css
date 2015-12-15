@@ -443,13 +443,13 @@ body {
 }
 
 #contact_form form .input_field {
-    width: 600px;
-    padding: 10px;
+    width: 400px;
+    padding: 5px;
     color: #000;
     border: 1px solid #5C5035;
     background: #eeeeee;
     font-family: Tahoma, Geneva, sans-serif;
-    font-size: 26px;
+    font-size: 16px;
     margin-top: 5px;
 }
 
@@ -461,9 +461,9 @@ body {
 }
 
 #contact_form form textarea {
-    width: 900px;
+    width: 600px;
     height: 150px;
-    padding: 200px;
+    padding: 150px;
     color: #000;
     border: 1px solid #5C5035;
     background: #eeeeee;
