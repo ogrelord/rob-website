@@ -430,3 +430,84 @@ body {
         font-size: 22px;
     }
 }
+
+/* contact */
+
+#contact_form {
+    padding: 0px;
+    width: 500px;
+}
+
+#contact_form form {
+
+}
+
+#contact_form form .input_field {
+    width: 600px;
+    padding: 10px;
+    color: #000;
+    border: 1px solid #5C5035;
+    background: #eeeeee;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 26px;
+    margin-top: 5px;
+}
+
+#contact_form form label {
+    display: block;
+    width: 140px;
+    margin-right: 15px;
+    font-size: 28px;
+}
+
+#contact_form form textarea {
+    width: 900px;
+    height: 150px;
+    padding: 200px;
+    color: #000;
+    border: 1px solid #5C5035;
+    background: #eeeeee;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 28px;
+    margin-top: 5px;
+}
+
+#contact_form form .submit_btn {
+    margin: 10px;
+    padding: 5px 14px;
+    border: 1px solid #5C5035;
+    background: #eeeeee;
+    color: #000;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+#map{
+    width: 800px;
+    height: 600px;
+}
+.cleaner { clear: both }
+.h10 { height: 10px }
+.h20 { height: 20px }
+.h30 { height: 60px }
+.h40 { height: 40px }
+.h50 { height: 50px }
+.h60 { height: 60px }
+
+.image_wrapper {
+    display: inline-block;
+    padding: 2px;
+
+     margin-bottom: 0px;
+}
+
+.image_fl {
+    float: left;
+    margin: 3px 20px 0 0;
+}
+
+.image_fr {
+    float: right;
+    margin: 3px 0 0 20px;
+}
+/* end of contact */
