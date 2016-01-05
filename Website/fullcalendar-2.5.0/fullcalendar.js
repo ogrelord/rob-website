@@ -1,9 +1,6 @@
-/*!
- * FullCalendar v2.5.0
- * Docs & License: http://fullcalendar.io/
- * (c) 2015 Adam
- */
-Shaw
+
+
+
 (function(factory) {
 	if (typeof define === 'function' && define.amd) {
 		define([ 'jquery', 'moment' ], factory);

@@ -16,7 +16,10 @@
     <!-- Custom Fonts -->
 
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
+    <link rel='stylesheet' href='fullcalendar-2.5.0/fullcalendar.css' />
+    <script src='fullcalendar-2.5.0/lib/jquery.min.js'></script>
+    <script src='fullcalendar-2.5.0/lib/moment.min.js'></script>
+    <script src='fullcalendar-2.5.0/fullcalendar.js'></script>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -165,8 +168,8 @@
         </div>
     </section>
         <BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
-    <section id="">
-        <div class="container">
+    <section id="Agenda">
+        <div id="calendarwidget">
 
 
 
@@ -203,25 +206,87 @@
 
 
 
-
-
-                        <div class="col_w330 float_l">
-                            <h4>My Location</h4>
-
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d23477.366506501614!2d4.670145524057301!3d51.79237908111412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1snl!2snl!4v1450174190265" width="1000" height="850" frameborder="0" style="border:0" allowfullscreen></iframe>
-                            <div class="cleaner h30"></div>
-
-
                         </div>
                     </div>
                 </div>
 
             </div>
-        </div>
+
 
 
     </section>
 </div>
+
+    <script>
+
+        $(document).ready(function() {
+
+            $('#calendarwidget').fullCalendar({
+                defaultDate: '2015-12-12',
+                editable: true,
+                eventLimit: true, // allow "more" link when too many events
+                events: [
+                    {
+                        title: 'All Day Event',
+                        start: '2015-12-01'
+                    },
+                    {
+                        title: 'Long Event',
+                        start: '2015-12-07',
+                        end: '2015-12-10'
+                    },
+                    {
+                        id: 999,
+                        title: 'Repeating Event',
+                        start: '2015-12-09T16:00:00'
+                    },
+                    {
+                        id: 999,
+                        title: 'Repeating Event',
+                        start: '2015-12-16T16:00:00'
+                    },
+                    {
+                        title: 'Conference',
+                        start: '2015-12-11',
+                        end: '2015-12-13'
+                    },
+                    {
+                        title: 'Meeting',
+                        start: '2015-12-12T10:30:00',
+                        end: '2015-12-12T12:30:00'
+                    },
+                    {
+                        title: 'Lunch',
+                        start: '2015-12-12T12:00:00'
+                    },
+                    {
+                        title: 'Meeting',
+                        start: '2015-12-12T14:30:00'
+                    },
+                    {
+                        title: 'Happy Hour',
+                        start: '2015-12-12T17:30:00'
+                    },
+                    {
+                        title: 'Dinner',
+                        start: '2015-12-12T20:00:00'
+                    },
+                    {
+                        title: 'Birthday Party',
+                        start: '2015-12-13T07:00:00'
+                    },
+                    {
+                        title: 'Click for Google',
+                        url: 'http://google.com/',
+                        start: '2015-12-28'
+                    }
+                ]
+            });
+
+        });
+
+    </script>
+
 </body>
 
 </html>
