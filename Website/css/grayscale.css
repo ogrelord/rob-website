@@ -1,8 +1,4 @@
-/*!
- * Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
+
 
 body {
     width: 100%;
@@ -511,3 +507,8 @@ body {
     margin: 3px 0 0 20px;
 }
 /* end of contact */
+#calendarwidget{
+width: 95%;
+float: right;
+padding: 180px;
+}
