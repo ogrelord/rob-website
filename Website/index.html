@@ -16,10 +16,106 @@
     <!-- Custom Fonts -->
 
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link rel='stylesheet' href='fullcalendar-2.5.0/fullcalendar.css' />
-    <script src='fullcalendar-2.5.0/lib/jquery.min.js'></script>
+    <link href='fullcalendar-2.5.0/fullcalendar.css' rel='stylesheet' />
+    <link href='fullcalendar-2.5.0/fullcalendar.print.css' rel='stylesheet' media='print' />
     <script src='fullcalendar-2.5.0/lib/moment.min.js'></script>
-    <script src='fullcalendar-2.5.0/fullcalendar.js'></script>
+    <script src='fullcalendar-2.5.0/lib/jquery.min.js'></script>
+    <script src='fullcalendar-2.5.0/fullcalendar.min.js'></script>
+    <script src='fullcalendar-2.5.0/lib/moment.min.js'></script>
+    <script>
+
+
+        $(document).ready(function() {
+            var date = new Date();
+            var d = date.getDate();
+            var m = date.getMonth();
+            var y = date.getFullYear();
+
+            var calendar = $('#calendarwidget').fullCalendar({
+                utc: true,
+                transmitTZD: true,
+                editable: true,
+                timeFormat:'YYYY-MM-DD HH:mm:ss',
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'month'
+                },timezone:'utc',
+
+                events: "http://localhost/Website/fullcalendar-2.5.0/events.php",
+
+                // Convert the allDay from string to boolean
+                eventRender: function(event, element) {
+                    if (event.allDay == 'true') {
+                        event.allDay = true;
+                    } else {
+                        event.allDay = false;
+                    }
+                },
+                selectable: true,
+                selectHelper: true,
+                select: function(start, end, allDay) {
+                    var title = prompt('Naam:');
+                    var url = prompt('email');
+                    if (title) {
+                        start = moment(start).format("YYYY-MM-DD HH:mm:ss");
+                        end = moment(end).format("YYYY-MM-DD HH:mm:ss");
+
+                        $.ajax({
+                            url: 'http://localhost/Website/fullcalendar-2.5.0/add_events.php',
+                            data: 'title='+ title+'&start='+ start +'&end='+ end +'&url='+ url ,
+                            type: "POST",
+                            success: function(json) {
+                                alert('Added Successfully');
+                            }
+                        });
+                        calendar.fullCalendar('renderEvent',
+                                {
+                                    title: title,
+                                    start: start,
+                                    end: end,
+                                    allDay: allDay
+                                },
+                                true // make the event "stick"
+                        );
+                    }
+                    calendar.fullCalendar('unselect');
+                },
+
+                editable: true,
+                eventDrop: function(event, delta) {
+                     start = moment(start).format(event.start, "YYYY-MM-DD HH:mm:ss");
+                     end = moment(end).format(event.end, "YYYY-MM-DD HH:mm:ss");
+                    $.ajax({
+                        url: 'http://localhost/Website/fullcalendar-2.5.0/update_events.php',
+                        data: 'title='+ event.title+'&start='+ start +'&end='+ end +'&id='+ event.id ,
+                        type: "POST",
+                        success: function(json) {
+                            alert("Updated Successfully");
+                        }
+                    });
+                },
+                eventResize: function(event) {
+                     start = moment(start).format(event.start, "YYYY-MM-DD HH:mm:ss");
+                     end = moment(end).format(event.end, "YYYY-MM-DD HH:mm:ss");
+                    $.ajax({
+                        url: 'http://localhost/Website/fullcalendar-2.5.0/update_events.php',
+                        data: 'title='+ event.title+'&start='+ start +'&end='+ end +'&id='+ event.id ,
+                        type: "POST",
+                        success: function(json) {
+                            alert("Updated Successfully");
+                        }
+                    });
+
+                }
+
+            });
+
+        });
+
+
+    </script>
+
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -34,12 +130,13 @@
             <li>
                 <a class="page-scroll" href="#portfolio">Portfolio</a>
             </li>
+           <!-- <li>
+            <a class="page-scroll" href="#contact">Contact</a>
+        </li>-->
             <li>
-                <a class="page-scroll" href="#Calender">Calender</a>
+                <a class="page-scroll" href="#Agenda">Calender</a>
             </li>
-            <li>
-                <a class="page-scroll" href="#contact">Contact</a>
-            </li>
+
         </ul>
     </div>
 
@@ -167,125 +264,80 @@
             </div>
         </div>
     </section>
-        <BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+      <!--  <BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><section id="contact">
+        <div id="Contact!">
+            <form name="contactform" method="post" action="send_form_email.php">
+
+                <table width="450px">
+                    <tr>
+                        <td valign="top">
+                            <label for="first_name">First Name *</label>
+                        </td>
+                        <td valign="top">
+                            <input  type="text" name="first_name" maxlength="50" size="30">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top"">
+                        <label for="last_name">Last Name *</label>
+                        </td>
+                        <td valign="top">
+                            <input  type="text" name="last_name" maxlength="50" size="30">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <label for="email">Email Address *</label>
+                        </td>
+                        <td valign="top">
+                            <input  type="text" name="email" maxlength="80" size="30">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <label for="telephone">Telephone Number</label>
+                        </td>
+                        <td valign="top">
+                            <input  type="text" name="telephone" maxlength="30" size="30">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <label for="comments">Comments *</label>
+                        </td>
+                        <td valign="top">
+                            <textarea  name="comments" maxlength="1000" cols="25" rows="6"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align:center">
+                            <input type="submit" value="Submit">
+
+                    </tr>
+                </table>
+            </form></div>
+        <BR><BR><BR><BR><BR><BR><BR><BR><BR>
+    </section>-->
     <section id="Agenda">
+        <div class="container">
+        For making an appointment you can add your time and information in the calendar below<br>
+        klick on the date and enter your name and the willing time. Don't forget to enter your e-mail</br>
+        so i can contact you as soon as possible.
+        </div>
+
+
+
+
         <div id="calendarwidget">
 
 
 
             </div>
-    </section>
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <p>For contact you can write me an E-mail. Leave your information and i will come back to you.</p>
-                <div class="col_w330 float_l">
-                    <h4>Write a message to us</h4>
-                    <div id="contact_form">
-                        <form method="post" name="contact" action="#">
 
-                            <label for="author">Name:</label> <input type="text" id="author" name="author" class="required input_field" />
-                            <div class="cleaner h10"></div>
+    </section><div><br><BR><BR><BR><BR><BR></div>
 
-                            <label for="email">Email:</label> <input type="text" class="validate-email required input_field" name="email" id="email" />
-                            <div class="cleaner h10"></div>
-
-                            <label for="subject">Subject:</label> <input type="text" class="validate-subject required input_field" name="subject" id="subject"/>
-                            <div class="cleaner h10"></div>
-
-                            <label for="text">Message:</label> <textarea id="text" name="text" rows="0" cols="0" class="required"></textarea>
-                            <div class="cleaner h10"></div>
-
-                            <input type="submit" value="Send" id="submit" name="submit" class="submit_btn float_l" />
-                            <input type="reset" value="Reset" id="reset" name="reset" class="submit_btn float_r" />
-
-                        </form>
-<div class="col_w330 float_r">
-<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
 </div>
 
-
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-
-    </section>
-</div>
-
-    <script>
-
-        $(document).ready(function() {
-
-            $('#calendarwidget').fullCalendar({
-                defaultDate: '2015-12-12',
-                editable: true,
-                eventLimit: true, // allow "more" link when too many events
-                events: [
-                    {
-                        title: 'All Day Event',
-                        start: '2015-12-01'
-                    },
-                    {
-                        title: 'Long Event',
-                        start: '2015-12-07',
-                        end: '2015-12-10'
-                    },
-                    {
-                        id: 999,
-                        title: 'Repeating Event',
-                        start: '2015-12-09T16:00:00'
-                    },
-                    {
-                        id: 999,
-                        title: 'Repeating Event',
-                        start: '2015-12-16T16:00:00'
-                    },
-                    {
-                        title: 'Conference',
-                        start: '2015-12-11',
-                        end: '2015-12-13'
-                    },
-                    {
-                        title: 'Meeting',
-                        start: '2015-12-12T10:30:00',
-                        end: '2015-12-12T12:30:00'
-                    },
-                    {
-                        title: 'Lunch',
-                        start: '2015-12-12T12:00:00'
-                    },
-                    {
-                        title: 'Meeting',
-                        start: '2015-12-12T14:30:00'
-                    },
-                    {
-                        title: 'Happy Hour',
-                        start: '2015-12-12T17:30:00'
-                    },
-                    {
-                        title: 'Dinner',
-                        start: '2015-12-12T20:00:00'
-                    },
-                    {
-                        title: 'Birthday Party',
-                        start: '2015-12-13T07:00:00'
-                    },
-                    {
-                        title: 'Click for Google',
-                        url: 'http://google.com/',
-                        start: '2015-12-28'
-                    }
-                ]
-            });
-
-        });
-
-    </script>
 
 </body>
 

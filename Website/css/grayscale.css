@@ -511,4 +511,19 @@ body {
 width: 95%;
 float: right;
 padding: 180px;
+    height:500px;
+
+}
+#Contact
+{
+    width: 95%;
+    float: right;
+    padding: 180px;
+}
+#information
+{
+    width: 80%;
+    height: auto;
+    padding: 100px 0;
+    vertical-align: middle;
 }
