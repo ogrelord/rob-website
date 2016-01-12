@@ -15,7 +15,7 @@
     -
     <!-- Custom Fonts -->
 
-    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+   <!-- <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">-->
     <link href='fullcalendar-2.5.0/fullcalendar.css' rel='stylesheet' />
     <link href='fullcalendar-2.5.0/fullcalendar.print.css' rel='stylesheet' media='print' />
     <script src='fullcalendar-2.5.0/lib/moment.min.js'></script>
@@ -42,7 +42,7 @@
                     right: 'month'
                 },timezone:'utc',
 
-                events: "http://localhost/Website/fullcalendar-2.5.0/events.php",
+                events: "https://localhost/Website/fullcalendar-2.5.0/events.php",
 
                 // Convert the allDay from string to boolean
                 eventRender: function(event, element) {
@@ -62,7 +62,7 @@
                         end = moment(end).format("YYYY-MM-DD HH:mm:ss");
 
                         $.ajax({
-                            url: 'http://localhost/Website/fullcalendar-2.5.0/add_events.php',
+                            url: 'https://localhost/Website/fullcalendar-2.5.0/add_events.php',
                             data: 'title='+ title+'&start='+ start +'&end='+ end +'&url='+ url ,
                             type: "POST",
                             success: function(json) {
@@ -87,7 +87,7 @@
                      start = moment(start).format(event.start, "YYYY-MM-DD HH:mm:ss");
                      end = moment(end).format(event.end, "YYYY-MM-DD HH:mm:ss");
                     $.ajax({
-                        url: 'http://localhost/Website/fullcalendar-2.5.0/update_events.php',
+                        url: 'https://localhost/Website/fullcalendar-2.5.0/update_events.php',
                         data: 'title='+ event.title+'&start='+ start +'&end='+ end +'&id='+ event.id ,
                         type: "POST",
                         success: function(json) {
@@ -99,7 +99,7 @@
                      start = moment(start).format(event.start, "YYYY-MM-DD HH:mm:ss");
                      end = moment(end).format(event.end, "YYYY-MM-DD HH:mm:ss");
                     $.ajax({
-                        url: 'http://localhost/Website/fullcalendar-2.5.0/update_events.php',
+                        url: 'https://localhost/Website/fullcalendar-2.5.0/update_events.php',
                         data: 'title='+ event.title+'&start='+ start +'&end='+ end +'&id='+ event.id ,
                         type: "POST",
                         success: function(json) {
