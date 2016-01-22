@@ -14,7 +14,7 @@ $end = $_POST['end'];
 
 // connection to the database
 try {
-    $bdd = new PDO('mysql:host=localhost;dbname=events', 'bob', 'test');
+    $bdd = new PDO('mysql:host=mysql.hostinger.nl;dbname=events', 'u188345966_bob', '9145210asdf');
 } catch(Exception $e) {
     exit('Unable to connect to database.');
 }

@@ -14,12 +14,13 @@
 
  // connection to the database
  try {
-     $bdd = new PDO('mysql:host=localhost;dbname=events', 'bob', 'test');
+     $bdd = new PDO('mysql:host=mysql.hostinger.nl;dbname=u188345966_event', 'u188345966_bob', '9145210asdf');
  } catch(Exception $e) {
      exit('Unable to connect to database.');
  }
  // Execute the query
  $resultat = $bdd->query($requete) or die(print_r($bdd->errorInfo()));
+
 
  // sending the encoded result to success page
 echo json_encode($resultat->fetchAll(PDO::FETCH_ASSOC));

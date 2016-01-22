@@ -1,27 +1,256 @@
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Rob Lambeek</title>
 
-<head>
-        <title>Rob Lambeek</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+      <link href='fullcalendar-2.5.0/fullcalendar.css' rel='stylesheet' />
+      <link href='fullcalendar-2.5.0/fullcalendar.print.css' rel='stylesheet' media='print' />
+      <script src='fullcalendar-2.5.0/lib/moment.min.js'></script>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+      <script src="js/scripts.js"></script>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+      <script src='fullcalendar-2.5.0/fullcalendar.js'></script>
+      <script src='fullcalendar-2.5.0/lib/moment.min.js'></script>
+  </head>
+  <body>
+    <nav id="topNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
 
-    <!-- Plugin CSS -->
-    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+                <a class="navbar-brand page-scroll" href="#first"><i class="ion-ios-analytics-outline"></i> Home</a>
+            </div>
+            <div class="navbar-collapse collapse" id="bs-navbar">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a class="page-scroll" href="#intro">Intro</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#galery">Gallery</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#calendar">Calendar</a>
+                    </li>
+                </ul>
 
-    <!-- Custom CSS-->
-    <link href="css/grayscale.css" rel="stylesheet">
-    -
-    <!-- Custom Fonts -->
+            </div>
+        </div>
+    </nav>
+    <header id="first">
+        <div class="header-content">
+            <div class="inner">
+                <h1 class="cursive">Rob Lambeek</h1>
+                <h4>A specialist in canvas, wall paintings and comic.</h4>
+                <hr>
+            </div>
+        </div>
 
-   <!-- <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">-->
-    <link href='fullcalendar-2.5.0/fullcalendar.css' rel='stylesheet' />
-    <link href='fullcalendar-2.5.0/fullcalendar.print.css' rel='stylesheet' media='print' />
-    <script src='fullcalendar-2.5.0/lib/moment.min.js'></script>
-    <script src='fullcalendar-2.5.0/lib/jquery.min.js'></script>
-    <script src='fullcalendar-2.5.0/fullcalendar.min.js'></script>
-    <script src='fullcalendar-2.5.0/lib/moment.min.js'></script>
+    </header>
+
+
+    <section class="bg-primary" id="intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 text-center">
+                    <h2 class="margin-top-0 text-primary">Welcome to my page</h2>
+                    <br>
+                    <p class="text-faded">
+                        Welkom de webpagina, hier kunnen mijn kunstwerken bekeken worden en kan er gezien worden op welke beurzen ik sta.
+                    </p>
+                    <p class="text-faded">
+                        Ik hoop dat u kan vinden wat u leuk vind.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="galery">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="margin-top-0 text-primary">Welcome to my portfolio.</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+
+                <div class="media wow fadeInRight">
+                    <h3></h3>
+                    <div class="media-body media-middle">
+                        <p class="text-faded">
+                            Here you can browse my art and see what i can do. In my spare time i draw and paint.
+                        </p>
+                        <p class="text-faded">
+                            My paintings are not all on canvas. I do wall paintings and comic drawing to. So i would say look around and be amazed.
+                        </p>
+                        <p class="text-faded">
+                            Greetings Rob Lambeek
+                        </p>  </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="paintings" class="no-padding">
+        <div class="media-body media-middle">
+
+            <p class="text-faded">
+                click the images for the full gallerie.
+            </p>  </div>
+        <div class="container-fluid">
+            <div class="row no-gutter">
+                <div class="col-lg-4 col-sm-6" >
+                    <a href="/gallerie.html" class="gallery-box" data-toggle="modal" data-src="img/landschapmetbrug.jpg">
+                        <img src="img/landschapmetbrug.jpg" class="img-responsive" alt="Image 1" href="gallerie.html">
+
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="/gallerie.html" class="gallery-box" data-toggle="modal" data-src="img/winter-in-praag.jpg">
+                        <img src="img/winter-in-praag.jpg" class="img-responsive" alt="Image 2">
+
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="/gallerie.html" class="gallery-box" data-toggle="modal" data-src="img/harley.jpg">
+                        <img src="img/harley.jpg" class="img-responsive" alt="Image 3">
+
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid" id="about">
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+                <h2 class="text-center text-primary">About</h2>
+                <hr>
+                <div class="media wow fadeInRight">
+                    <h3></h3>
+                    <div class="media-body media-middle">
+                        <p>Rob Lambeek is op 21 augustus 1964 geboren in Dordrecht. Al op zeer jonge leeftijd is hij bezig met tekenen en (later) schilderen. Eerst nog strips, daarna voorzichtig de eerste landschapsschilderijtjes en portretten (toen nog in muurverf!) met als eerste inspiratiebron de schilderijen van Rembrandt, Vermeer, Carel Willink, en Edward Hopper. Voor zijn twaalfde verjaardag kreeg Rob zijn eerste olieverfset en dat was een magisch moment! Rob's werk is vrij realistisch van aard en duidelijk is in zijn werk het respect voor de natuur te ontdekken. Hij is niet aan één onderwerp gebonden (zie: motorfietsen en muren) en probeert zo nu en dan iets anders uit. Sinds kort heeft Rob zich ook in muurschilderingen gespecialiseerd. Een leuke materie die hij graag verder uit wil bouwen. Als je geïnteresseerd bent in zijn werk, dan kun je Rob via e-mail bereiken.</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+   <!-- <aside class="bg-dark">
+        <div class="container text-center">
+
+                    <div class="row">
+
+                        <!-- Form Code Start
+                        <form id='contactus' action='<?php echo $formproc->GetSelfScript(); ?>' method='post' accept-charset='UTF-8'>
+                            <fieldset >
+                                <h2 class="text-center text-primary">Contact me.</h2>
+
+                                <input type='hidden' name='submitted' id='submitted' value='1'/>
+                                <input type='hidden' name='<?php echo $formproc->GetFormIDInputName(); ?>' value='<?php echo $formproc->GetFormIDInputValue(); ?>'/>
+                                <input type='text'  class='spmhidip' name='<?php echo $formproc->GetSpamTrapInputName(); ?>' />
+
+                                <div class='short_explanation'>* required fields</div>
+
+                                <div><span class='error'><?php echo $formproc-getErrorMessage(); ?></span></div>
+                                <div class='container'>
+                                    <label for='name' >Your Full Name*: </label><br/>
+                                    <input type='text' name='name' id='name' value='<?php echo $formproc->SafeDisplay("name") ?>' maxlength="50" /><br/>
+                                    <span id='contactus_name_errorloc' class='error'></span>
+                                </div>
+                                <div class='container'>
+                                    <label for='email' >Email Address*:</label><br/>
+                                    <input type='text' name='email' id='email' value='<?php echo $formproc->SafeDisplay("email") ?>' maxlength="50" /><br/>
+                                    <span id='contactus_email_errorloc' class='error'></span>
+                                </div>
+                                <div class='container'>
+                                    <label for='phone' >Phone Number:</label><br/>
+                                    <input type='text' name='phone' id='phone' value='<?php echo $formproc->SafeDisplay("phone") ?>' maxlength="15" /><br/>
+                                    <span id='contactus_phone_errorloc' class='error'></span>
+                                </div>
+                                <div class='container'>
+                                    <label for='message' >Message:</label><br/>
+                                    <span id='contactus_message_errorloc' class='error'></span>
+                                    <textarea rows="10" cols="50" name='message' id='message'><?php echo $formproc->SafeDisplay('message') ?></textarea>
+                                </div>
+
+
+
+                                <div class='container'>
+                                    <input type='submit' name='Submit' value='Submit' />
+                                </div>
+
+                            </fieldset>
+                        </form>
+                    </div>
+        </div>
+    </aside>-->
+<sector id="calendar" class="no-pa">
+        <div id="calendarwidget">
+
+
+
+        </div>
+
+        <div id="calendarModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span> <span class="sr-only">close</span></button>
+                        <h4 id="modalTitle" class="modal-title">Afspraak maken</h4>
+                    </div>
+                    <div id="modalBody" class="modal-body">
+                        <form id="createAppointmentForm">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="title" id="title" placeholder="Naam ">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="url" id="url" placeholder="E-mail">
+                            </div>
+                            <input type="hidden" id="start"/>
+                            <input type="hidden" id="end"/>
+                            <div class="control-group">
+                                <label class="control-label" for="when">Datum:</label>
+                                <div class="controls controls-row" id="when" style="margin-top:5px;">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary" id="submitButton">Save</button>
+                    </div>
+                </div></div></div>
+    </sector>
+    <footer id="footer">
+        <div class="container-fluid">
+            <div class="row">
+                Created by BB
+            <br/>
+            </div>
+        </div>
+    </footer>
+
+    <!--scripts loaded here from cdn for performance -->
+    <script>
+        var BASE = "http://ogreloat.esy.es";
+    </script>
     <script>
 
 
@@ -35,59 +264,49 @@
                 utc: true,
                 transmitTZD: true,
                 editable: true,
+
                 timeFormat:'YYYY-MM-DD HH:mm:ss',
                 header: {
                     left: 'prev,next today',
                     center: 'title',
-                    right: 'month'
+                    right: 'month,agendaWeek'
                 },timezone:'utc',
+                allDaySlot:false,
 
-                events: "https://localhost/Website/fullcalendar-2.5.0/events.php",
+                events: BASE + "/fullcalendar-2.5.0/events.php",
 
-                // Convert the allDay from string to boolean
-                eventRender: function(event, element) {
-                    if (event.allDay == 'true') {
-                        event.allDay = true;
-                    } else {
-                        event.allDay = false;
-                    }
-                },
+
                 selectable: true,
                 selectHelper: true,
-                select: function(start, end, allDay) {
-                    var title = prompt('Naam:');
-                    var url = prompt('email');
-                    if (title) {
-                        start = moment(start).format("YYYY-MM-DD HH:mm:ss");
-                        end = moment(end).format("YYYY-MM-DD HH:mm:ss");
+                select: function (start, end) {
+                    //declare variables from form for processing
+                    var start = moment(start).format("YYYY-MM-DD HH:mm");
+                    var end = moment(end).format("YYYY-MM-DD HH:mm");
+                    var mywhen = start + ' - ' + end;
 
-                        $.ajax({
-                            url: 'https://localhost/Website/fullcalendar-2.5.0/add_events.php',
-                            data: 'title='+ title+'&start='+ start +'&end='+ end +'&url='+ url ,
-                            type: "POST",
-                            success: function(json) {
-                                alert('Added Successfully');
-                            }
-                        });
-                        calendar.fullCalendar('renderEvent',
-                                {
-                                    title: title,
-                                    start: start,
-                                    end: end,
-                                    allDay: allDay
-                                },
-                                true // make the event "stick"
-                        );
-                    }
+
+                    $('#calendarModal #start').val(start);
+                    $('#calendarModal #end').val(end);
+                    $('#calendarModal #when').text(mywhen);
+                    $('#calendarModal').modal();
+
+                    calendar.fullCalendar('renderEvent',
+                            {
+                                title: "name",
+                                start: start,
+                                end: end
+                            },
+                            true // make the event "stick"
+                    );
+
                     calendar.fullCalendar('unselect');
                 },
 
-                editable: true,
                 eventDrop: function(event, delta) {
-                     start = moment(start).format(event.start, "YYYY-MM-DD HH:mm:ss");
-                     end = moment(end).format(event.end, "YYYY-MM-DD HH:mm:ss");
+                    start = moment(start).format(event.start, "YYYY-MM-DD HH:mm:ss");
+                    end = moment(end).format(event.end, "YYYY-MM-DD HH:mm:ss");
                     $.ajax({
-                        url: 'https://localhost/Website/fullcalendar-2.5.0/update_events.php',
+                        url: BASE + '/fullcalendar-2.5.0/update_events.php',
                         data: 'title='+ event.title+'&start='+ start +'&end='+ end +'&id='+ event.id ,
                         type: "POST",
                         success: function(json) {
@@ -96,10 +315,10 @@
                     });
                 },
                 eventResize: function(event) {
-                     start = moment(start).format(event.start, "YYYY-MM-DD HH:mm:ss");
-                     end = moment(end).format(event.end, "YYYY-MM-DD HH:mm:ss");
+                    start = moment(start).format(event.start, "YYYY-MM-DD HH:mm:ss");
+                    end = moment(end).format(event.end, "YYYY-MM-DD HH:mm:ss");
                     $.ajax({
-                        url: 'https://localhost/Website/fullcalendar-2.5.0/update_events.php',
+                        url: BASE + '/fullcalendar-2.5.0/update_events.php',
                         data: 'title='+ event.title+'&start='+ start +'&end='+ end +'&id='+ event.id ,
                         type: "POST",
                         success: function(json) {
@@ -110,235 +329,33 @@
                 }
 
             });
+            $('#submitButton').on('click', function (e) {
+                // We don't want this to act as a link so cancel the link action
+                e.preventDefault();
 
+                doSubmit();
+            });
+
+            function doSubmit() {
+                $("#calendarModal").modal('hide');
+                var title = $('#title').val();
+                var url = $('#url').val();
+                var start = $('#start').val();
+                var end = $('#end').val();
+
+                $.ajax({
+                    url: BASE + '/fullcalendar-2.5.0/add_events.php',
+                    data: '&title=' + title + '&url=' + url + '&start=' + start + '&end=' + end ,
+                    type: "POST",
+                    success: function (json) {
+                        alert('Added Successfully');
+                        location.reload();
+                    }
+                });
+            }
         });
 
 
     </script>
-
-</head>
-
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-
-    <!-- Navigation -->
-
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-            <li>
-                <a class="page-scroll" href="#about">About</a>
-            </li>
-            <li>
-                <a class="page-scroll" href="#portfolio">Portfolio</a>
-            </li>
-           <!-- <li>
-            <a class="page-scroll" href="#contact">Contact</a>
-        </li>-->
-            <li>
-                <a class="page-scroll" href="#Agenda">Calender</a>
-            </li>
-
-        </ul>
-    </div>
-
-    <!-- Intro Header -->
-    <header class="intro">
-        <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">Rob Lambeek</h1>
-                        <p class="intro-text">Welkom de webpagina, hier kunnen mijn kunstwerken bekeken worden en kan er gezien worden op welke beurzen ik sta.</p>
-                        <p class="intro-text">Ik hoop dat u kan vinden wat u leuk vind.</p>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- About Section -->
-    <section id="about" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Welcome to the page of Rob Lambeek.</h2>
-                <p><em>Sed sit amet elit quis arcu tincidunt auctor nec eu tellus. Morbi feugiat euismod velit, in feugiat nisl vulputate at. Sed est lacus, faucibus non tempus ut, tincidunt in orci. </em></p>
-                <p> Duis lectus enim, fermentum et ullamcorper eget, varius non velit. Proin sagittis tempor enim, sit amet mattis lectus facilisis et. Nulla adipiscing massa eget sapien tempor eget ultricies nulla mollis. Donec accumsan feugiat tristique. </p>
-                <img src="img/robbo.jpg" class="img-responsive" alt="">
-            </div>
-        </div>
-    </section>
-    <BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
-    <div class="row">
-        <section id="info">
-            <div class="container">
-                <div class="row">
-
-                    <h2>Welcome to my portfolio.</h2>
-                    <p><em>Here you can browse my art and see what i can do. In my spare time i draw and paint.  </em></p>
-                    <p>My paintings are not all on canvas. I do wall paintings and comic drawing to. So i would say look around and be amazed. </p>
-                    <p>Greetings Rob Lambeek</p>
-                </div><BR><BR><BR><BR><BR>
-            </div>
-        </section>
-    <section class="no-padding" id="portfolio">
-
-        <div class="container-fluid">
-
-            <div class="row no-gutter">
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="img/Hanneke.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                   Portretten
-                                </div>
-                                <div class="project-name">
-                                   Hanneke
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="img/catalunya.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Landscapes
-                                </div>
-                                <div class="project-name">
-                                    Catalunya
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="img/motor_1.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                   Motoren
-                                </div>
-                                <div class="project-name">
-                                    Vos Motoren
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="img/harley.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Motoren
-                                </div>
-                                <div class="project-name">
-                                    Harley
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="img/winter-in-praag.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Landscape
-                                </div>
-                                <div class="project-name">
-                                  Winter in Praag
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-      <!--  <BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><section id="contact">
-        <div id="Contact!">
-            <form name="contactform" method="post" action="send_form_email.php">
-
-                <table width="450px">
-                    <tr>
-                        <td valign="top">
-                            <label for="first_name">First Name *</label>
-                        </td>
-                        <td valign="top">
-                            <input  type="text" name="first_name" maxlength="50" size="30">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td valign="top"">
-                        <label for="last_name">Last Name *</label>
-                        </td>
-                        <td valign="top">
-                            <input  type="text" name="last_name" maxlength="50" size="30">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td valign="top">
-                            <label for="email">Email Address *</label>
-                        </td>
-                        <td valign="top">
-                            <input  type="text" name="email" maxlength="80" size="30">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td valign="top">
-                            <label for="telephone">Telephone Number</label>
-                        </td>
-                        <td valign="top">
-                            <input  type="text" name="telephone" maxlength="30" size="30">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td valign="top">
-                            <label for="comments">Comments *</label>
-                        </td>
-                        <td valign="top">
-                            <textarea  name="comments" maxlength="1000" cols="25" rows="6"></textarea>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" style="text-align:center">
-                            <input type="submit" value="Submit">
-
-                    </tr>
-                </table>
-            </form></div>
-        <BR><BR><BR><BR><BR><BR><BR><BR><BR>
-    </section>-->
-    <section id="Agenda">
-        <div class="container">
-        For making an appointment you can add your time and information in the calendar below<br>
-        klick on the date and enter your name and the willing time. Don't forget to enter your e-mail</br>
-        so i can contact you as soon as possible.
-        </div>
-
-
-
-
-        <div id="calendarwidget">
-
-
-
-            </div>
-
-    </section><div><br><BR><BR><BR><BR><BR></div>
-
-</div>
-
-
-</body>
-
+  </body>
 </html>
